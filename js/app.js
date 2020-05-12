@@ -16,7 +16,6 @@ function employeeData(data) {
     for(let i = 0; i < data.results.length; i += 1 ) {
         employees.push(data.results[i]);
         main.innerHTML +=  ` 
-        
             <div class="card">
                 <div class="image-container">
                     <img src="${data.results[i].picture.medium}" alt="">
