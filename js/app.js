@@ -13,7 +13,7 @@ fetch(url)
 /* Functions */
 
 function employeeData(data) {
-    for(let i = 0; i < data.results.length; i += 1 ) {
+    for(let i = 0; i < data.results.length; i += 1) {
         employees.push(data.results[i]);
         main.innerHTML +=  ` 
             <div class="card">
