@@ -32,4 +32,4 @@ function employeeData(data) {
 
 }
 
-console.log(e);
+console.log(employees);
