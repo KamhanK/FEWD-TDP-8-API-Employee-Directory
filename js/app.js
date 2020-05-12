@@ -2,7 +2,7 @@
 
 const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
-const main = document.getElementById('main');
+// const main = document.getElementById('main');
 
 /* Fetch Functions */
 
@@ -15,10 +15,10 @@ fetch(url)
 function employeeData(data) {
     for(let i = 0; i < data.results.length; i += 1 ) {
         employees.push(data.results[i]);
-        main.document.createElement('section').innerHTML =  ` 
+        document.createElement('section').innerHTML =  ` 
         
             <div class="card">
-                <div class="image-box">
+                <div class="image-container">
                     <img src="${data.results[i].picture.medium}" alt="">
                 </div>
                 <div class="employee-info">
