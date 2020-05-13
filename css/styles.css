@@ -10,6 +10,8 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    padding: 0 1rem;
+    padding-bottom: 100px;
 }
 
 /* Grid Styles */
@@ -17,19 +19,18 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-content: center;
     grid-gap: 2rem;
-    padding: 2rem;
-    padding-bottom: 100px;
-}
+    padding-bottom: 40px;
+  }
 
 /* Header Styles */
 
 header {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 h1 {
@@ -39,6 +40,7 @@ h1 {
 
 input {
     width: 100%;
+    height: 50px;
     padding: 1rem;
     border-radius: 5px;
     border: 2px solid #DFDFDF;
@@ -48,11 +50,20 @@ input {
 
 .card {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     border: 2px solid #DFDFDF;
     border-radius: 10px;
-    align-items: center;
-    padding: 1.75rem;
+    padding: 1.75rem 1rem;
+  }
+
+.card .image-container {
+    margin-left: auto;
+}
+
+.card .employee-info {
+    margin-right: auto;
 }
 
 img {
@@ -74,17 +85,32 @@ p {
 /* Media Queries */
 
 @media only screen and (min-width: 768px) {
+    
+    /* Grid Styles */
+
     .grid-container {
         grid-template-columns: 1fr 1fr; 
     }
 
+    /* Header Styles */
+
     header {
-        justify-content: flex-end;
+        grid-template-columns: 1fr 1fr;
     }
 
     h1 {
         margin-right: auto;
         font-size: 1.75rem;
+        grid-column: 1/ span 1;
+        justify-self: start;
+
+    }
+
+    input {
+        width: 300px;
+        grid-column: 2 / span 1;
+        justify-self: end;
+        align-self: center;
     }
 
     /* Employee Styles */
@@ -107,12 +133,20 @@ p {
         font-size: 1rem;
     }
 
-    input {
-        width: 300px;
-    }
+    
 }
 
 @media only screen and (min-width: 1024px) {
+    
+
+    /* header, 
+    .grid-container {
+        max-width: 1200px;
+        margin: 0 auto; 
+    } */
+
+    /* Grid Styles */
+    
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;   
     }
