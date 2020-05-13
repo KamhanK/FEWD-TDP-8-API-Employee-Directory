@@ -18,7 +18,7 @@ function employeeData(data) {
         main.innerHTML +=  ` 
             <div class="card">
                 <div class="image-container">
-                    <img src="${data.results[i].picture.medium}" alt="">
+                    <img src="${data.results[i].picture.large}" alt="">
                 </div>
                 <div class="employee-info">
                     <h2 class="employee-name">${data.results[i].name.first} ${data.results[i].name.last}</h2>
