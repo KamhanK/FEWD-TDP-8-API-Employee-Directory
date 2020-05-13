@@ -86,6 +86,14 @@ p {
 
 @media only screen and (min-width: 768px) {
     
+    /* Base Styles */
+
+    header, 
+    .grid-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
     /* Grid Styles */
 
     .grid-container {
@@ -99,11 +107,9 @@ p {
     }
 
     h1 {
-        margin-right: auto;
         font-size: 1.75rem;
-        grid-column: 1/ span 1;
+        grid-column: 1 / span 1;
         justify-self: start;
-
     }
 
     input {
@@ -137,13 +143,6 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
-    
-
-    /* header, 
-    .grid-container {
-        max-width: 1200px;
-        margin: 0 auto; 
-    } */
 
     /* Grid Styles */
     
