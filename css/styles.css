@@ -20,7 +20,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
   }
 
 /* Header Styles */
@@ -101,6 +101,7 @@ p {
 
     .grid-container {
         grid-template-columns: 1fr 1fr; 
+        grid-gap: 2rem;
     }
 
     /* Header Styles */
@@ -156,7 +157,7 @@ p {
     .card {
         
     }
-    
+
 }
 
 
