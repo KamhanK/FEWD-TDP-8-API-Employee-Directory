@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     padding: 0 1rem;
-    padding-bottom: 100px;
+    padding-bottom: 133.5px;
 }
 
 /* Grid Styles */
@@ -21,7 +21,6 @@ body {
     grid-template-columns: 1fr;
     justify-content: center;
     grid-gap: 2rem;
-    padding-bottom: 40px;
   }
 
 /* Header Styles */
@@ -56,7 +55,7 @@ input {
     border: 2px solid #DFDFDF;
     border-radius: 10px;
     padding: 1.75rem 1rem;
-  }
+}
 
 .card .image-container {
     margin-left: auto;
@@ -88,9 +87,13 @@ p {
     
     /* Base Styles */
 
+    body {
+        padding: 0 3rem;
+    }
+
     header, 
     .grid-container {
-        max-width: 1200px;
+        max-width: 1300px;
         margin: 0 auto;
     }
 
@@ -153,6 +156,7 @@ p {
     .card {
         
     }
+    
 }
 
 
