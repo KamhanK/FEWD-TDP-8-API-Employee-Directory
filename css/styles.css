@@ -16,7 +16,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     justify-items: center;
     grid-gap: 2rem;
     padding: 2rem;
@@ -28,6 +28,20 @@ body {
 header {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #DFDFDF;
 }
 
 /* Employee Styles */
@@ -43,6 +57,18 @@ header {
 
 img {
     border-radius: 50%;
+    margin-right: 1rem;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 1rem;
+}
+
+p {
+    margin: 2px;
+    font-size: .75rem;
+    color: #83898D;
 }
 
 /* Media Queries */
@@ -53,23 +79,42 @@ img {
     }
 
     header {
-        justify-content: flex-start;
+        justify-content: flex-end;
     }
 
-    input {
-        margin-left: auto;
+    h1 {
+        margin-right: auto;
+        font-size: 1.75rem;
     }
+
+    /* Employee Styles */
 
     .card {
         min-width: 400px;
+    }
+
+    img {
+        width: 128px
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    input {
+        width: 300px;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        
-        
+        grid-template-columns: 1fr 1fr 1fr;   
     }
 
     .card {
