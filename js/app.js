@@ -3,7 +3,7 @@
 const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
 const main = document.getElementById('main');
-const modalHtml = document.querySelector('.modal-overlay');
+const modalHtml = document.querySelector('.modal-container');
 
 /* Fetch Functions */
 
@@ -46,7 +46,7 @@ function modal(employee, index){
     const dob = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
 
     modalHtml.innerHTML = `
-    <div class="modal-container">
+    <div class="modal-overlay">
         <div class="modal-content">
             <span class="close">X</span>
             <img src="${employee.picture.large}" alt="">
@@ -64,12 +64,12 @@ function modal(employee, index){
     </div>
     `;
 
-    const modalContainer = document.getElementsByClassName('modal-container')[0];
-    modalContainer.style.display = 'block';
+    const modalOverlay = document.getElementsByClassName('modal-overlay')[0];
+    modalOverlay.style.display = 'block';
     const modalClose = document.getElementsByClassName('close')[0];
 
     modalClose.addEventListener('click', () => {
-        modalContainer.style.display = 'none';
+        modalOverlay.style.display = 'none';
     });
 }
 
