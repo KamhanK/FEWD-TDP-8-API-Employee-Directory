@@ -3,6 +3,7 @@
 const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
 const main = document.getElementById('main');
+const modalContainer = document.getElementsByClassName('modal-container');
 
 /* Fetch Functions */
 
@@ -27,7 +28,48 @@ function employeeData(data) {
                 </div>
             </div>
         `;
-    }  
+    }
+
+    document.querySelectorAll('.card').forEach((card, index) => {
+        card.addEventListener('click', (event) => {
+            employeeModal(employees[index], index);
+        });
+    });
 }
 
 console.log(employees);
+
+// Modal Function
+
+function modal(employee, index){
+    
+    const dob = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
+
+    main.innerHTML = `
+    <div class="modal-container">
+        <div class="modal-content">
+            <span class="close">X</span>
+            <img src="${employee.picture.large}" alt="">
+            <h2>${employee.name.first} ${employee.name.last}</h2>
+            <p>${employee.email}</p>
+            <p>${employee.location.city}</p>
+            <span class="left-arrow"><</span>
+            <span class="right-arrow">></span>
+            <p>${employee.cell}</p>
+            <address>${employee.location.street.number}, ${employee.location.street.name}, 
+            ${employee.location.city}, ${employee.location.state}, 
+            ${employee.location.postcode}</address>
+            <p>${dob}</p>
+        </div>
+    </div>
+    `;
+
+    modalContainer.style.display = 'block';
+
+    const modalClose = document.getElementsByClassName('close')[0];
+
+    modalClose.addEventListener('click', () => {
+        modalContainer.style.display = 'none';
+    });
+}
+
