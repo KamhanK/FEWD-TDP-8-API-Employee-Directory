@@ -84,9 +84,6 @@ p {
 /* Overlay Styles */
 
 .modal-overlay {
-    /* display: flex;
-    flex-direction: column;
-    align-content: center; */
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -99,14 +96,20 @@ p {
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
 
+.modal-container {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .modal-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
     max-width: 300px;
     border-radius: 10px;
-    margin: 0 auto;
 }
 
 
