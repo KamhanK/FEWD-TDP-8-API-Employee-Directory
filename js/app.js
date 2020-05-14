@@ -64,9 +64,8 @@ function modal(employee, index){
     </div>
     `;
 
+    const modalContainer = document.getElementsByClassName('modal-container')[0];
     modalContainer.style.display = 'block';
-
-    const modalContainer = document.querySelector('.modal-container')[0];
     const modalClose = document.getElementsByClassName('close')[0];
 
     modalClose.addEventListener('click', () => {
