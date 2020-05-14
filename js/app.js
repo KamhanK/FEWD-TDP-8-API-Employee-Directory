@@ -3,7 +3,7 @@
 const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
 const main = document.getElementById('main');
-const modalContainer = document.getElementsByClassName('modal-container');
+const modalHtml = document.querySelector('.modal-overlay');
 
 /* Fetch Functions */
 
@@ -32,7 +32,7 @@ function employeeData(data) {
 
     document.querySelectorAll('.card').forEach((card, index) => {
         card.addEventListener('click', (event) => {
-            employeeModal(employees[index], index);
+            modal(employees[index], index);
         });
     });
 }
@@ -45,7 +45,7 @@ function modal(employee, index){
     
     const dob = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
 
-    main.innerHTML = `
+    modalHtml.innerHTML = `
     <div class="modal-container">
         <div class="modal-content">
             <span class="close">X</span>
@@ -66,6 +66,7 @@ function modal(employee, index){
 
     modalContainer.style.display = 'block';
 
+    const modalContainer = document.querySelector('.modal-container')[0];
     const modalClose = document.getElementsByClassName('close')[0];
 
     modalClose.addEventListener('click', () => {
