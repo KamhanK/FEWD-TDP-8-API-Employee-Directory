@@ -62,11 +62,12 @@ function modal(employee, index){
         </div>
     `;
 
-    modalHtml.style.display = 'flex';
+    const modalOverlay = document.getElementsByClassName('modal-container')[0];
+    modalOverlay.style.display = 'flex';
     const modalClose = document.getElementsByClassName('close')[0];
 
     modalClose.addEventListener('click', () => {
-        modalHtml.style.display = 'none';
+        modalOverlay.style.display = 'none';
     });
 }
 
