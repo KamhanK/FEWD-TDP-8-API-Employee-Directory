@@ -83,7 +83,7 @@ p {
 
 /* Overlay Styles */
 
-.modal-overlay {
+.modal-container {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -94,7 +94,6 @@ p {
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -108,7 +107,6 @@ p {
     max-width: 300px;
     border-radius: 10px;
 }
-
 
 /* Media Queries */
 
