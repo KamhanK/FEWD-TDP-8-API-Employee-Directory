@@ -4,6 +4,9 @@ const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
 const main = document.getElementById('main');
 const modalOverlay = document.querySelector('.modal-overlay');
+const modalContent = document.querySelector('.modal-content');
+
+console.log(modalContent);
 
 /* Fetch Functions */
 
@@ -12,6 +15,8 @@ fetch(url)
     .then(employeeData);
 
 /* Functions */
+
+// Employee Card Function
 
 function employeeData(data) {
     for(let i = 0; i < data.results.length; i += 1) {
@@ -41,24 +46,26 @@ console.log(employees);
 
 // Modal Function
 
-function modal(employee, index){
+function modal(employee, index) {
     
     const dob = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
 
     modalOverlay.innerHTML = `
         <div class="modal-content">
             <span class="close">X</span>
-            <img src="${employee.picture.large}" alt="">
+            <div class="modal-image-container">
+                <button class="left-arrow"><</button>
+                <img src="${employee.picture.large}" alt="">
+                <button class="right-arrow">></button>
+            </div>
             <h2>${employee.name.first} ${employee.name.last}</h2>
             <p>${employee.email}</p>
             <p>${employee.location.city}</p>
-            <span class="left-arrow"><</span>
-            <span class="right-arrow">></span>
+            <hr>
             <p>${employee.cell}</p>
-            <address>${employee.location.street.number}, ${employee.location.street.name}, 
-            ${employee.location.city}, ${employee.location.state}, 
-            ${employee.location.postcode}</address>
-            <p>${dob}</p>
+            <p>${employee.location.street.number} ${employee.location.street.name}, 
+            ${employee.location.state} ${employee.location.postcode}</p>
+            <p>Birthday: ${dob}</p>
         </div>
     `;
 
@@ -69,4 +76,23 @@ function modal(employee, index){
         modalOverlay.style.display = 'none';
     });
 }
+
+// Event Listeners
+
+modalOverlay.addEventListener('click', (event) => {
+    if(event.target.className === 'right-arrow') {
+        let indexPosition = parseInt(modalOverlay.firstElementChild.getAttribute('data-index'));
+        indexPosition += 1;
+        if (indexPosition < 12) {
+            modal(employees[indexPosition], indexPosition);
+        }
+    }
+    if(event.target.className === 'left-arrow') {
+        let indexPosition = parseInt(modalOverlay.firstElementChild.getAttribute('data-index'));
+        indexPosition -= 1;
+        if (indexPosition > -1) {
+            modal(employees[indexPosition], indexPosition);
+        }
+    }
+});
 

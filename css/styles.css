@@ -81,7 +81,7 @@ p {
     color: #83898D;
 }
 
-/* Overlay Styles */
+/* Overlay & Modal Styles */
 
 .modal-overlay {
     position: fixed; /* Sit on top of the page content */
@@ -106,6 +106,41 @@ p {
     background-color: #FFFFFF;
     min-width: 300px;
     border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.close {
+    align-self: flex-end;
+    color: #83898D;
+}
+
+.modal-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image-container img {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    width: 95px;
+}
+
+.left-arrow,
+.right-arrow {
+    font-size: 2rem;
+    font-weight: 100;
+    color: #83898D;
+    border: none;
+    outline: none;
+}
+
+hr {
+    width: 100%;
 }
 
 /* Media Queries */
@@ -171,11 +206,20 @@ p {
         font-size: 1rem;
     }
 
-    /* Overlay Styles */
+    /* Overlay & Modal Styles */
 
     .modal-content {
         min-width: 410px;
         
+    }
+
+    .modal-image-container img {
+        width: 170px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        font-size: 3rem;   
     }
   
 }
