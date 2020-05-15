@@ -115,6 +115,7 @@ p {
 .close {
     align-self: flex-end;
     color: #83898D;
+    cursor: pointer;
 }
 
 .modal-image-container {
@@ -209,8 +210,7 @@ hr {
     /* Overlay & Modal Styles */
 
     .modal-content {
-        min-width: 410px;
-        
+        min-width: 410px;   
     }
 
     .modal-image-container img {

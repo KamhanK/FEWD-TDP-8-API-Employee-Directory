@@ -4,9 +4,6 @@ const url = 'https://randomuser.me/api/?results=12&nat=gb,us,fr';
 const employees = [];
 const main = document.getElementById('main');
 const modalOverlay = document.querySelector('.modal-overlay');
-const modalContent = document.querySelector('.modal-content');
-
-console.log(modalContent);
 
 /* Fetch Functions */
 
@@ -42,8 +39,6 @@ function employeeData(data) {
     });
 }
 
-console.log(employees);
-
 // Modal Function
 
 function modal(employee, index) {
@@ -51,14 +46,14 @@ function modal(employee, index) {
     const dob = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
 
     modalOverlay.innerHTML = `
-        <div class="modal-content">
+        <div class="modal-content" data-index="${index}">
             <span class="close">X</span>
             <div class="modal-image-container">
                 <button class="left-arrow"><</button>
                 <img src="${employee.picture.large}" alt="">
                 <button class="right-arrow">></button>
             </div>
-            <h2>${employee.name.first} ${employee.name.last}</h2>
+            <h2 class="employee-name">${employee.name.first} ${employee.name.last}</h2>
             <p>${employee.email}</p>
             <p>${employee.location.city}</p>
             <hr>
@@ -96,3 +91,28 @@ modalOverlay.addEventListener('click', (event) => {
     }
 });
 
+/* Search Code */
+
+const searchString = document.getElementById('search');
+const a = document.getElementsByClassName('card');
+
+searchString.addEventListener('keyup', () => {
+    const input = searchString.value.toLowerCase();
+
+    for (let i = 0; i < a.length; i += 1) {
+        const nameData = a[i].innerHTML;
+        if (nameData.toLowerCase().indexOf(input) > -1) {
+            a[i].style.display = "";
+            } else {
+            a[i].style.display = "none";
+        }
+    }
+});
+
+searchString.addEventListener('search', () => {
+    if (event.target.value === '') {
+      for (let i = 0; i < a.length; i += 1) {
+        a[i].style.display = "";
+      }
+    }
+});
