@@ -55,6 +55,7 @@ input {
     border: 2px solid #DFDFDF;
     border-radius: 10px;
     padding: 1.75rem 1rem;
+    cursor: pointer;
 }
 
 .card .image-container {
@@ -136,12 +137,15 @@ p {
     font-size: 2rem;
     font-weight: 100;
     color: #83898D;
+    background: none;    
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 hr {
     width: 100%;
+    color: #83898D;
 }
 
 /* Media Queries */
@@ -230,10 +234,6 @@ hr {
     
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr;   
-    }
-
-    .card {
-        
     }
 
 }
