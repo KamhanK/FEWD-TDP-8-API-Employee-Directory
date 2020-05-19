@@ -150,93 +150,93 @@ hr {
 
 /* Media Queries */
 
-@media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
+        
+        /* Base Styles */
+
+        body {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        header, 
+        .grid-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Grid Styles */
+
+        .grid-container {
+            grid-template-columns: 1fr 1fr; 
+            grid-gap: 2rem;
+        }
+
+        /* Header Styles */
+
+        header {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            grid-column: 1 / span 1;
+            justify-self: start;
+        }
+
+        input {
+            width: 300px;
+            grid-column: 2 / span 1;
+            justify-self: end;
+            align-self: center;
+        }
+
+        /* Employee Styles */
+
+        .card {
+            min-width: 400px;
+        }
+
+        img {
+            width: 128px
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        /* Overlay & Modal Styles */
+
+        .modal-content {
+            min-width: 410px;   
+        }
+
+        .modal-image-container img {
+            width: 170px;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            font-size: 3rem;   
+        }
     
-    /* Base Styles */
-
-    body {
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
-    header, 
-    .grid-container {
-        max-width: 1300px;
-        margin: 0 auto;
+    @media only screen and (min-width: 1024px) {
+
+        /* Grid Styles */
+        
+        .grid-container {
+            grid-template-columns: 1fr 1fr 1fr;   
+        }
+
     }
-
-    /* Grid Styles */
-
-    .grid-container {
-        grid-template-columns: 1fr 1fr; 
-        grid-gap: 2rem;
-    }
-
-    /* Header Styles */
-
-    header {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-        grid-column: 1 / span 1;
-        justify-self: start;
-    }
-
-    input {
-        width: 300px;
-        grid-column: 2 / span 1;
-        justify-self: end;
-        align-self: center;
-    }
-
-    /* Employee Styles */
-
-    .card {
-        min-width: 400px;
-    }
-
-    img {
-        width: 128px
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    p {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 1rem;
-    }
-
-    /* Overlay & Modal Styles */
-
-    .modal-content {
-        min-width: 410px;   
-    }
-
-    .modal-image-container img {
-        width: 170px;
-    }
-
-    .left-arrow,
-    .right-arrow {
-        font-size: 3rem;   
-    }
-  
-}
-
-@media only screen and (min-width: 1024px) {
-
-    /* Grid Styles */
-    
-    .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;   
-    }
-
-}
 
 
 

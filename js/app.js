@@ -91,7 +91,7 @@ modalOverlay.addEventListener('click', (event) => {
     }
 });
 
-/* Search Filter Code */
+/* Search Filter */
 
 const searchString = document.getElementById('search');
 const a = document.getElementsByClassName('card');
