@@ -161,7 +161,7 @@ hr {
 
         header, 
         .grid-container {
-            max-width: 1300px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -194,21 +194,17 @@ hr {
         /* Employee Styles */
 
         .card {
-            min-width: 400px;
-        }
-
-        img {
-            width: 128px
+            max-width: 385px;
         }
         
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.15rem;
         }
         
         p {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 1rem;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            font-size: .95rem;
         }
 
         /* Overlay & Modal Styles */
@@ -228,16 +224,6 @@ hr {
     
     }
 
-    /* @media only screen and (min-width: 1024px) { */
-
-        /* Grid Styles */
-        
-        /* .grid-container {
-            grid-template-columns: 1fr 1fr;   
-        }
-
-    } */
-
     @media only screen and (min-width: 1200px) {
 
         /* Grid Styles */
@@ -245,6 +231,22 @@ hr {
         .grid-container {
             grid-template-columns: 1fr 1fr 1fr;
             max-width: 1200px;   
+        }
+
+        /* Employee Styles */
+
+        img {
+            width: 128px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
 
     }
