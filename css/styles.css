@@ -233,7 +233,18 @@ hr {
         /* Grid Styles */
         
         .grid-container {
-            grid-template-columns: 1fr 1fr 1fr;   
+            grid-template-columns: 1fr 1fr;   
+        }
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        /* Grid Styles */
+        
+        .grid-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 1200px;   
         }
 
     }
