@@ -235,6 +235,10 @@ hr {
 
         /* Employee Styles */
 
+        .card {
+            max-width: 400px;
+        }
+
         img {
             width: 128px;
         }
