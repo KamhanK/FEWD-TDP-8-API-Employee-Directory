@@ -95,8 +95,8 @@ p {
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
