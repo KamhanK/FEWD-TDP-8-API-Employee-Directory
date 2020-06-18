@@ -1,6 +1,6 @@
 # Techdegree Project 8 - API Employee Directory
 
-**Skills Used:**
+**Skills & Technologies Used:**
 
 - HTML
 - CSS
