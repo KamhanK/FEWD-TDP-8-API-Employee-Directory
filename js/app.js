@@ -15,6 +15,8 @@ fetch(url)
 
 // Employee Card Function
 
+/* This function fetches the employee data from the Fetch API and displays the results for the employee thumbnail and employee data. */
+
 function employeeData(data) {
     for(let i = 0; i < data.results.length; i += 1) {
         employees.push(data.results[i]);
@@ -40,6 +42,8 @@ function employeeData(data) {
 }
 
 // Modal Function
+
+/* This function parses the data from the Fetch API based on search critieria and displays a large employee thumbnail and employee data in the popup modal window. */
 
 function modal(employee, index) {
     
@@ -74,6 +78,8 @@ function modal(employee, index) {
 
 // Event Listeners
 
+/* This event listener listens for clicks on the navigation arrows in the popup modal window and increments the employee data either forwards or backwards in the current list of employees. */
+
 modalOverlay.addEventListener('click', (event) => {
     if(event.target.className === 'right-arrow') {
         let indexPosition = parseInt(modalOverlay.firstElementChild.getAttribute('data-index'));
@@ -93,6 +99,8 @@ modalOverlay.addEventListener('click', (event) => {
 
 /* Search Filter */
 
+/* This event listener listens for any keyup events in the input search field and displays the resulting card of the search based on the card data. */
+
 const searchString = document.getElementById('search');
 const a = document.getElementsByClassName('card');
 
@@ -108,6 +116,8 @@ searchString.addEventListener('keyup', () => {
         }
     }
 });
+
+/* This event listener listens for a null value in the input search field so the search results are reset and all cards are displayed. */
 
 searchString.addEventListener('search', () => {
     if (event.target.value === '') {
